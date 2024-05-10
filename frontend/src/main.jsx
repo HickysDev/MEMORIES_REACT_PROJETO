@@ -8,6 +8,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 //Paginas
 import Home from "./routes/Home.jsx";
 import AddMemory from "./routes/AddMemory.jsx";
+import Memory from "./routes/Memory.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,12 +20,13 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {path: "/addMemory", element: <AddMemory />},
+      {path: "/memories/:id", element: <Memory />},
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
